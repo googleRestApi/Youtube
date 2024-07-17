@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM node:20
 
 WORKDIR /src
 
@@ -6,8 +6,8 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY ..
+COPY . .
 
-ENV PORT = 4550
+ENV PORT=4550
 
 CMD ["npm", "run", "start"]
